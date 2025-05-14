@@ -8,26 +8,27 @@ using namespace std;
 class Fruit {
 public:
   virtual ~Fruit() = default;
-  virtual int eat() = 0;
-protected:
+  virtual int eat() { return energy; };
+  Fruit (int energy) { this->energy = energy; };
+private:
   int energy{0};
 };
 
 class Apple : public Fruit {
 public:
-  Apple() { energy = 10; }
+  Apple() : Fruit(10) { };
   int eat() override {
     cout << "Ate apple" << endl;
-    return energy;
+    Fruit::eat();
   }
 };
 
 class Banana : public Fruit {
 public:
-  Banana() { energy = 20; }
+  Banana() : Fruit (20) { };
   int eat() override {
     cout << "Ate banana" << endl;
-    return energy;
+    Fruit::eat();
   }
 };
 
