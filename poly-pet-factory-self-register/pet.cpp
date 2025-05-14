@@ -5,6 +5,11 @@
 #include "pet.h"
 #include <iostream>
 
+// In this code, we hvae an abstract pet factory, and concrete CatFactory,
+// DogFactory, etc. Each factory is now registered as being able to make that object
+// So, creating a CatFactory object registers it.
+// If you want to have a HorseFactory object, there is no need to change this code, we get to just add it to the compiling
+
 using namespace std;
 
 /**
