@@ -15,6 +15,12 @@
 #include <cassert>
 #include <vector>
 
+// Now, each Pet has their own "create" function
+// PetFactory keeps a copy of a "prototype" pet to make new ones
+// It keeps this list of objects in a map/hash table"
+// The problem with this is that we still have to register each Pet, or hardcode it
+
+
 using namespace std;
 
 string readNextItem(istream &io, char delimiter = ',') {
