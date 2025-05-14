@@ -1,6 +1,8 @@
 #include <iostream>
 #include <map>
 
+// Trying to make it easier to add new pets
+
 using namespace std;
 
 class Pet {
@@ -22,6 +24,8 @@ class Dog : public Pet {
 };
 
 // PetFactory is the only one that knows about different Pets
+// Only the PetFactory needs to be modified to add pets
+// The problem with this is that PetFactory has to be modified when new pets entered
 class PetFactory {
  public:
   static Pet *create(const string &type) {
