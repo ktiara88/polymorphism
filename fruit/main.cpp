@@ -9,6 +9,7 @@ class Fruit {
 public:
   virtual ~Fruit() = default;
   virtual int eat() = 0;
+protected:
   int energy{0};
 };
 
