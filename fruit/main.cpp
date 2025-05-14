@@ -6,6 +6,8 @@
 using namespace std;
 
 class Fruit {
+  // could do Friend class Apple, but you should avoid doing because we don't want the superclass to know 
+  // anything about its derived classes
 public:
   virtual ~Fruit() = default;
   virtual int eat() { return energy; };
